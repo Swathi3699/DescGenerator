@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Description Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js"></script>    
+    <script src="p_script.js"></script>
+    <link href="p_style.css" rel="stylesheet" type="text/css"></link>    
+  </head>
+
+  <body>
+    <div class="topnav">
+      <a style="font-family: arial;" href="t_index.html">Transition Descriptions</a>
+      <a style="font-family: arial;" href="p_index.html">Parameter Descriptions</a>
+    </div>
+    
+    <!-- <div style="padding-left:16px">
+      <h2>Top Navigation Example</h2>
+      <p>Some content..</p>
+    </div> -->
+    
+    <h1>Parameter Description Generator</h1>
+	  <p>This tool now supports generation of descriptions for Locked Parameters both Operations and Unit Procedures.</p>
+    <p>Upload an excel workbook with Locked Parameters table in the first sheet</p>
+    <!-- Input element to upload an excel file -->
+    <input type="file" id="file_upload" />
+    <button onclick="upload()">Generate Descriptions
+    </button>	
+    <button onclick="window.location.reload()">Refresh
+    </button>	
+    <br/>
+    <br/>
+    <!-- table to display the excel data -->
+    <p id="display_excel_data"></p>
+    
+  </body>
+</html>
