@@ -46,14 +46,14 @@ function upload() {
       var htmlData='<br/>';
       for(var i=0;i<jsonData.length;i++){
         var row=jsonData[i];
-        if(row["#"]==undefined || row["Phase Name"]==undefined || row["Parameter Name"]==undefined || row["Attribute Name"]==undefined || row["Attribute Value"]==undefined)
+        if(row["#"]==undefined || row["Phase"]==undefined || row["Parameter Name"]==undefined || row["Attribute Name"]==undefined || row["Attribute Value"]==undefined)
         continue
         else
         {
           num = new String(row['#']).trim().replace('.','')
           htmlData+=`
           <html>
-          <div class="colored" id="demo${i}" onclick=copyToClipboard(selectElementContents(document.getElementById("demo${i}")))>The following screenshot displays the execution of the locked parameter ${row["Parameter Name"]} inside the phase ${row["Phase Name"]}.<br/>
+          <div class="colored" id="demo${i}" onclick=copyToClipboard(selectElementContents(document.getElementById("demo${i}")))>The following screenshot displays the execution of the locked parameter ${row["Parameter Name"]} inside the phase ${row["Phase"]}.<br/>
           <table>
           <tr>
           <th>Expression</th>
